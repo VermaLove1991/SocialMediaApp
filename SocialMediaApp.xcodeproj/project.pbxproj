@@ -14,6 +14,7 @@
 		18571341272EA780007281C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1857133F272EA780007281C4 /* LaunchScreen.storyboard */; };
 		1857134A272EA7CF007281C4 /* UserProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18571348272EA7CF007281C4 /* UserProfileCell.swift */; };
 		1857134B272EA7CF007281C4 /* UserProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18571349272EA7CF007281C4 /* UserProfileCell.xib */; };
+		189C8E612731A3AF00151B75 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189C8E602731A3AF00151B75 /* Reachability.swift */; };
 		18E80EFB272FBC4200FBD5D7 /* FollowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E80EF9272FBC4200FBD5D7 /* FollowTableViewCell.swift */; };
 		18E80EFC272FBC4200FBD5D7 /* FollowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E80EFA272FBC4200FBD5D7 /* FollowTableViewCell.xib */; };
 		18E80F03272FBFD100FBD5D7 /* UserProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E80F02272FBFD100FBD5D7 /* UserProfileVC.swift */; };
@@ -43,6 +44,7 @@
 		18571342272EA780007281C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18571348272EA7CF007281C4 /* UserProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileCell.swift; sourceTree = "<group>"; };
 		18571349272EA7CF007281C4 /* UserProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserProfileCell.xib; sourceTree = "<group>"; };
+		189C8E602731A3AF00151B75 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		18E80EF9272FBC4200FBD5D7 /* FollowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowTableViewCell.swift; sourceTree = "<group>"; };
 		18E80EFA272FBC4200FBD5D7 /* FollowTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowTableViewCell.xib; sourceTree = "<group>"; };
 		18E80F02272FBFD100FBD5D7 /* UserProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileVC.swift; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 			children = (
 				18E80F10272FCD3F00FBD5D7 /* KeyConstant.swift */,
 				18E80F06272FC07400FBD5D7 /* Extension.swift */,
+				189C8E602731A3AF00151B75 /* Reachability.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 			files = (
 				18E80F18272FE4EB00FBD5D7 /* EndPoint.swift in Sources */,
 				18E80F15272FE3DE00FBD5D7 /* APIManager.swift in Sources */,
+				189C8E612731A3AF00151B75 /* Reachability.swift in Sources */,
 				18E80F0D272FC36100FBD5D7 /* FollowListViewModel.swift in Sources */,
 				18E80F27273033A200FBD5D7 /* OtherProfileDataSource.swift in Sources */,
 				18E80F2227301FCE00FBD5D7 /* SearchModel.swift in Sources */,

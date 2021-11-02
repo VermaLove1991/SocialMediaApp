@@ -34,7 +34,10 @@ class UserProfileVC: UIViewController {
     
     @objc private func getData() {
         APIManager.sharedInstance.call(type: EndpointItem.user, params: nil) { (resultValue: UserModel?, errorValue) in
-            if let result = resultValue {
+            if let error = errorValue {
+                self.showAlert(error)
+            }
+            else if let result = resultValue {
                 self.userModel = result
                 self.tableView.reloadData()
                 self.refreshControl.endRefreshing()

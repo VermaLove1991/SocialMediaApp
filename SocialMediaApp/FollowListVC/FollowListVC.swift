@@ -53,7 +53,9 @@ class FollowListVC: UIViewController {
             apiType = (followListType == .follow) ? EndpointItem.otherFollowers(username: userName) : EndpointItem.otherFollowing(username: userName)
         }
         APIManager.sharedInstance.call(type: apiType, params: nil) { (resultValue: FollowModelElement?, errorValue) in
-            if let result = resultValue {
+            if let error = errorValue {
+                self.showAlert(error)
+            } else if let result = resultValue {
                 self.arrayFollow = result
                 self.tableView.reloadData()
                 self.refreshControl.endRefreshing()
@@ -65,7 +67,9 @@ class FollowListVC: UIViewController {
         let apiValue = EndpointItem.search(q: text, order: "asc", page: pageNumer)
         
         APIManager.sharedInstance.call(type: apiValue, params: nil) { (resultValue: SearchModel?, errorValue) in
-            if let result = resultValue {
+            if let error = errorValue {
+                self.showAlert(error)
+            } else if let result = resultValue {
                 self.isSearchActive = true
                 self.arraySearchFollow = result.items
                 self.tableView.reloadData()

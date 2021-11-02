@@ -12,6 +12,13 @@ class APIManager {
     static let sharedInstance = APIManager()
     
     func call<T: Codable>(type: EndPointType, params: Parameters? = nil, handler: @escaping (T?, String?)->()) {
+        guard Reachability.isConnectedToNetwork() else {
+            handler(nil, "Check you internet connection")
+            return
+        }
+        print(type.url)
+        print(type.httpMethod)
+        print(type.headers)
         AF.request(type.url,
                    method: type.httpMethod,
                    parameters: params,
@@ -31,8 +38,8 @@ class APIManager {
                     }
                 }
                 break
-            case .failure(_):
-                handler(nil, "self.parseApiError(data: data.data)")
+            case .failure(let error):
+                handler(nil, error.localizedDescription)
                 break
             }
         }
