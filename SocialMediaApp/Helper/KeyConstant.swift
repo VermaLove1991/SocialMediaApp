@@ -9,7 +9,7 @@ import Foundation
 
 struct KeyConstant {
     enum ApplicationKeys: String {
-        case gitHubAuthToken = "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"
+        case gitHubAuthToken = "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"
     }
     
     enum FollowListType {
